@@ -204,15 +204,13 @@
     }
     else {
         verifyButton.enabled = NO;
-        [[MSFetcher sharedInstance] verifyPhoneNumber:finalString success:^{
+        [[MSFetcher sharedInstance] verifyPhoneNumber:[finalString stringByReplacingOccurrencesOfString:@"+" withString:@""] success:^{
             ;
         }failure:nil];
     }
 }
 
-- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    
-}
+
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     if ([verifyField isFirstResponder]) {

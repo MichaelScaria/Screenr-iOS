@@ -49,6 +49,7 @@
 		9E963790182E307C003B275B /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E96378F182E307C003B275B /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		9E963792182E52DF003B275B /* Disclosure.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E963791182E52DF003B275B /* Disclosure.png */; };
 		9E963795182E53C0003B275B /* MSPurchaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E963794182E53C0003B275B /* MSPurchaseViewController.m */; };
+		9EEA3AA4182EAB0C0004B624 /* MSConversationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EEA3AA3182EAB0C0004B624 /* MSConversationViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,6 +124,8 @@
 		9E963791182E52DF003B275B /* Disclosure.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Disclosure.png; sourceTree = "<group>"; };
 		9E963793182E53C0003B275B /* MSPurchaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MSPurchaseViewController.h; path = Roboto/MSPurchaseViewController.h; sourceTree = "<group>"; };
 		9E963794182E53C0003B275B /* MSPurchaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MSPurchaseViewController.m; path = Roboto/MSPurchaseViewController.m; sourceTree = "<group>"; };
+		9EEA3AA2182EAB0C0004B624 /* MSConversationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSConversationViewController.h; sourceTree = "<group>"; };
+		9EEA3AA3182EAB0C0004B624 /* MSConversationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSConversationViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +194,8 @@
 				9E96376B182E1136003B275B /* MSRegisterViewController.m */,
 				9E963793182E53C0003B275B /* MSPurchaseViewController.h */,
 				9E963794182E53C0003B275B /* MSPurchaseViewController.m */,
+				9EEA3AA2182EAB0C0004B624 /* MSConversationViewController.h */,
+				9EEA3AA3182EAB0C0004B624 /* MSConversationViewController.m */,
 				9E96376D182E2F99003B275B /* MSFetcher.h */,
 				9E96376E182E2F99003B275B /* MSFetcher.m */,
 				9E963730182E0238003B275B /* Images.xcassets */,
@@ -407,6 +412,7 @@
 				9E96378B182E3023003B275B /* AFXMLRequestOperation.m in Sources */,
 				9E96376C182E1136003B275B /* MSRegisterViewController.m in Sources */,
 				9E96378C182E3023003B275B /* UIImageView+AFNetworking.m in Sources */,
+				9EEA3AA4182EAB0C0004B624 /* MSConversationViewController.m in Sources */,
 				9E96378A182E3023003B275B /* AFURLConnectionOperation.m in Sources */,
 				9E963788182E3023003B275B /* AFNetworkActivityIndicatorManager.m in Sources */,
 				9E96372F182E0238003B275B /* MSViewController.m in Sources */,
@@ -625,6 +631,7 @@
 				9E963749182E0238003B275B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9E96374A182E0238003B275B /* Build configuration list for PBXNativeTarget "ScreenrTests" */ = {
 			isa = XCConfigurationList;
@@ -633,6 +640,7 @@
 				9E96374C182E0238003B275B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
