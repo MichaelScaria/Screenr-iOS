@@ -8,8 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MSConversationViewController : UIViewController
+@interface MSConversationViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, strong) NSMutableArray *conversations;
+@property (nonatomic, strong) NSString *number;
 @property (strong, nonatomic) IBOutlet UIView *headerView;
 @property (strong, nonatomic) IBOutlet UILabel *titleLabel;
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) IBOutlet UIButton *cancelButton;
+- (IBAction)cancel:(id)sender;
 @end

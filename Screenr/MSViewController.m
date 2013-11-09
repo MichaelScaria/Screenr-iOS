@@ -48,7 +48,7 @@
         MSConversationViewController *vc = (MSConversationViewController *)segue.destinationViewController;
         NSIndexPath *path = (NSIndexPath *)sender;
         NSDictionary *d = _numbers[path.row];
-        NSLog(@"D:%@", d);
+        vc.number = d[@"number"];
         vc.conversations = d[@"conversations"];
     }
 }
@@ -84,7 +84,7 @@
 {
     [_tableView deselectRowAtIndexPath:indexPath animated:YES];
     NSDictionary *d = _numbers[indexPath.row];
-    [self performSegueWithIdentifier:@"Conversations" sender:indexPath];
+    [self performSegueWithIdentifier:@"Conversation" sender:indexPath];
 }
 
 @end

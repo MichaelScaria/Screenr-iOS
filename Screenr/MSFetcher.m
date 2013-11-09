@@ -145,7 +145,7 @@
 - (void)buyNumber:(NSDictionary *)d success:(void (^)(void))success failure:(void (^)(void))failure {
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@/api/purchase", kRootURL]]];
     [request setValue:@"gzip" forHTTPHeaderField:@"Accept-Encoding"];
-    [request setHTTPBody:[[NSString stringWithFormat:@"phone_number=%@&purchase=%@&region=%@&postal_code=%@",[[NSUserDefaults standardUserDefaults] objectForKey:@"PhoneNumber"], d[@"number"], d[@"region"], d[@"postal_code"]] dataUsingEncoding:NSUTF8StringEncoding]];
+    [request setHTTPBody:[[NSString stringWithFormat:@"phone_number=%@&purchase=%@&region=%@&postal_code=%@",[[NSUserDefaults standardUserDefaults] objectForKey:@"PhoneNumber"], [d[@"number"] stringByReplacingOccurrencesOfString:@"+" withString:@""], d[@"region"], d[@"postal_code"]] dataUsingEncoding:NSUTF8StringEncoding]];
     [request setHTTPMethod:@"POST"];
     
     AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
@@ -183,5 +183,24 @@
         if (failure) failure();
     }];
     [operation start];
+}
+
+- (void)messagesForConversation:(NSString *)conversationID success:(void (^)(NSArray *))success failure:(void (^)(void))failure {
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@/api/messages", kRootURL]]];
+    [request setValue:@"gzip" forHTTPHeaderField:@"Accept-Encoding"];
+    [request setHTTPBody:[[NSString stringWithFormat:@"conversation_id=%@",conversationID] dataUsingEncoding:NSUTF8StringEncoding]];
+    [request setHTTPMethod:@"POST"];
+    
+    AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
+    [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSData *data = (NSData *)responseObject;
+        NSArray *results = [[JSONDecoder decoder] objectWithData:data];
+        success(results);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Error: %@", error);
+        if (failure) failure();
+    }];
+    [operation start];
+    
 }
 @end

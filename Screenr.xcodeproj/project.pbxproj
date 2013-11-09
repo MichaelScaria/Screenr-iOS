@@ -50,6 +50,8 @@
 		9E963792182E52DF003B275B /* Disclosure.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E963791182E52DF003B275B /* Disclosure.png */; };
 		9E963795182E53C0003B275B /* MSPurchaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E963794182E53C0003B275B /* MSPurchaseViewController.m */; };
 		9EEA3AA4182EAB0C0004B624 /* MSConversationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EEA3AA3182EAB0C0004B624 /* MSConversationViewController.m */; };
+		9EEA3AA7182EBF5E0004B624 /* MSMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EEA3AA6182EBF5E0004B624 /* MSMessageViewController.m */; };
+		9EEA3AAA182ECEAC0004B624 /* MSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EEA3AA9182ECEAC0004B624 /* MSLabel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -126,6 +128,10 @@
 		9E963794182E53C0003B275B /* MSPurchaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MSPurchaseViewController.m; path = Roboto/MSPurchaseViewController.m; sourceTree = "<group>"; };
 		9EEA3AA2182EAB0C0004B624 /* MSConversationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSConversationViewController.h; sourceTree = "<group>"; };
 		9EEA3AA3182EAB0C0004B624 /* MSConversationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSConversationViewController.m; sourceTree = "<group>"; };
+		9EEA3AA5182EBF5E0004B624 /* MSMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSMessageViewController.h; sourceTree = "<group>"; };
+		9EEA3AA6182EBF5E0004B624 /* MSMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSMessageViewController.m; sourceTree = "<group>"; };
+		9EEA3AA8182ECEAC0004B624 /* MSLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSLabel.h; sourceTree = "<group>"; };
+		9EEA3AA9182ECEAC0004B624 /* MSLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSLabel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,8 +202,12 @@
 				9E963794182E53C0003B275B /* MSPurchaseViewController.m */,
 				9EEA3AA2182EAB0C0004B624 /* MSConversationViewController.h */,
 				9EEA3AA3182EAB0C0004B624 /* MSConversationViewController.m */,
+				9EEA3AA5182EBF5E0004B624 /* MSMessageViewController.h */,
+				9EEA3AA6182EBF5E0004B624 /* MSMessageViewController.m */,
 				9E96376D182E2F99003B275B /* MSFetcher.h */,
 				9E96376E182E2F99003B275B /* MSFetcher.m */,
+				9EEA3AA8182ECEAC0004B624 /* MSLabel.h */,
+				9EEA3AA9182ECEAC0004B624 /* MSLabel.m */,
 				9E963730182E0238003B275B /* Images.xcassets */,
 				9E96378D182E307C003B275B /* JSONKit */,
 				9E963770182E3023003B275B /* AFNetworking */,
@@ -414,6 +424,8 @@
 				9E96378C182E3023003B275B /* UIImageView+AFNetworking.m in Sources */,
 				9EEA3AA4182EAB0C0004B624 /* MSConversationViewController.m in Sources */,
 				9E96378A182E3023003B275B /* AFURLConnectionOperation.m in Sources */,
+				9EEA3AA7182EBF5E0004B624 /* MSMessageViewController.m in Sources */,
+				9EEA3AAA182ECEAC0004B624 /* MSLabel.m in Sources */,
 				9E963788182E3023003B275B /* AFNetworkActivityIndicatorManager.m in Sources */,
 				9E96372F182E0238003B275B /* MSViewController.m in Sources */,
 				9E963787182E3023003B275B /* AFJSONRequestOperation.m in Sources */,
