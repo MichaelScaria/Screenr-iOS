@@ -20,10 +20,9 @@
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
-- (void)didReceiveMemoryWarning
+- (void)presentRegisterView
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    [self performSegueWithIdentifier:@"Register" sender:self];
 }
 
 @end

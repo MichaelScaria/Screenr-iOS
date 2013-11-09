@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface MSViewController : UIViewController
-
+- (void)presentRegisterView;
 @end

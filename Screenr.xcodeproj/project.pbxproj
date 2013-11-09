@@ -21,6 +21,32 @@
 		9E96373A182E0238003B275B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E96371C182E0238003B275B /* UIKit.framework */; };
 		9E963742182E0238003B275B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9E963740182E0238003B275B /* InfoPlist.strings */; };
 		9E963744182E0238003B275B /* ScreenrTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E963743182E0238003B275B /* ScreenrTests.m */; };
+		9E96374E182E0E40003B275B /* Logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E96374D182E0E40003B275B /* Logo@2x.png */; };
+		9E96375D182E10F4003B275B /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9E963750182E10F4003B275B /* LICENSE.txt */; };
+		9E96375E182E10F4003B275B /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9E963751182E10F4003B275B /* Roboto-Black.ttf */; };
+		9E96375F182E10F4003B275B /* Roboto-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9E963752182E10F4003B275B /* Roboto-BlackItalic.ttf */; };
+		9E963760182E10F4003B275B /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9E963753182E10F4003B275B /* Roboto-Bold.ttf */; };
+		9E963761182E10F4003B275B /* Roboto-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9E963754182E10F4003B275B /* Roboto-BoldItalic.ttf */; };
+		9E963762182E10F4003B275B /* Roboto-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9E963755182E10F4003B275B /* Roboto-Italic.ttf */; };
+		9E963763182E10F4003B275B /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9E963756182E10F4003B275B /* Roboto-Light.ttf */; };
+		9E963764182E10F4003B275B /* Roboto-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9E963757182E10F4003B275B /* Roboto-LightItalic.ttf */; };
+		9E963765182E10F4003B275B /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9E963758182E10F4003B275B /* Roboto-Medium.ttf */; };
+		9E963766182E10F4003B275B /* Roboto-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9E963759182E10F4003B275B /* Roboto-MediumItalic.ttf */; };
+		9E963767182E10F4003B275B /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9E96375A182E10F4003B275B /* Roboto-Regular.ttf */; };
+		9E963768182E10F4003B275B /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9E96375B182E10F4003B275B /* Roboto-Thin.ttf */; };
+		9E963769182E10F4003B275B /* Roboto-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9E96375C182E10F4003B275B /* Roboto-ThinItalic.ttf */; };
+		9E96376C182E1136003B275B /* MSRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E96376B182E1136003B275B /* MSRegisterViewController.m */; };
+		9E96376F182E2F99003B275B /* MSFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E96376E182E2F99003B275B /* MSFetcher.m */; };
+		9E963784182E3023003B275B /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E963772182E3023003B275B /* AFHTTPClient.m */; };
+		9E963785182E3023003B275B /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E963774182E3023003B275B /* AFHTTPRequestOperation.m */; };
+		9E963786182E3023003B275B /* AFImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E963776182E3023003B275B /* AFImageRequestOperation.m */; };
+		9E963787182E3023003B275B /* AFJSONRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E963778182E3023003B275B /* AFJSONRequestOperation.m */; };
+		9E963788182E3023003B275B /* AFNetworkActivityIndicatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E96377A182E3023003B275B /* AFNetworkActivityIndicatorManager.m */; };
+		9E963789182E3023003B275B /* AFPropertyListRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E96377D182E3023003B275B /* AFPropertyListRequestOperation.m */; };
+		9E96378A182E3023003B275B /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E96377F182E3023003B275B /* AFURLConnectionOperation.m */; };
+		9E96378B182E3023003B275B /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E963781182E3023003B275B /* AFXMLRequestOperation.m */; };
+		9E96378C182E3023003B275B /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E963783182E3023003B275B /* UIImageView+AFNetworking.m */; };
+		9E963790182E307C003B275B /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E96378F182E307C003B275B /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +79,45 @@
 		9E96373F182E0238003B275B /* ScreenrTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ScreenrTests-Info.plist"; sourceTree = "<group>"; };
 		9E963741182E0238003B275B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9E963743182E0238003B275B /* ScreenrTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScreenrTests.m; sourceTree = "<group>"; };
+		9E96374D182E0E40003B275B /* Logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Logo@2x.png"; sourceTree = "<group>"; };
+		9E963750182E10F4003B275B /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		9E963751182E10F4003B275B /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
+		9E963752182E10F4003B275B /* Roboto-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BlackItalic.ttf"; sourceTree = "<group>"; };
+		9E963753182E10F4003B275B /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		9E963754182E10F4003B275B /* Roboto-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BoldItalic.ttf"; sourceTree = "<group>"; };
+		9E963755182E10F4003B275B /* Roboto-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Italic.ttf"; sourceTree = "<group>"; };
+		9E963756182E10F4003B275B /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
+		9E963757182E10F4003B275B /* Roboto-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-LightItalic.ttf"; sourceTree = "<group>"; };
+		9E963758182E10F4003B275B /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		9E963759182E10F4003B275B /* Roboto-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-MediumItalic.ttf"; sourceTree = "<group>"; };
+		9E96375A182E10F4003B275B /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		9E96375B182E10F4003B275B /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
+		9E96375C182E10F4003B275B /* Roboto-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-ThinItalic.ttf"; sourceTree = "<group>"; };
+		9E96376A182E1136003B275B /* MSRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSRegisterViewController.h; sourceTree = "<group>"; };
+		9E96376B182E1136003B275B /* MSRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSRegisterViewController.m; sourceTree = "<group>"; };
+		9E96376D182E2F99003B275B /* MSFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSFetcher.h; sourceTree = "<group>"; };
+		9E96376E182E2F99003B275B /* MSFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSFetcher.m; sourceTree = "<group>"; };
+		9E963771182E3023003B275B /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
+		9E963772182E3023003B275B /* AFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPClient.m; sourceTree = "<group>"; };
+		9E963773182E3023003B275B /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
+		9E963774182E3023003B275B /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
+		9E963775182E3023003B275B /* AFImageRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFImageRequestOperation.h; sourceTree = "<group>"; };
+		9E963776182E3023003B275B /* AFImageRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFImageRequestOperation.m; sourceTree = "<group>"; };
+		9E963777182E3023003B275B /* AFJSONRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFJSONRequestOperation.h; sourceTree = "<group>"; };
+		9E963778182E3023003B275B /* AFJSONRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFJSONRequestOperation.m; sourceTree = "<group>"; };
+		9E963779182E3023003B275B /* AFNetworkActivityIndicatorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkActivityIndicatorManager.h; sourceTree = "<group>"; };
+		9E96377A182E3023003B275B /* AFNetworkActivityIndicatorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkActivityIndicatorManager.m; sourceTree = "<group>"; };
+		9E96377B182E3023003B275B /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
+		9E96377C182E3023003B275B /* AFPropertyListRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFPropertyListRequestOperation.h; sourceTree = "<group>"; };
+		9E96377D182E3023003B275B /* AFPropertyListRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFPropertyListRequestOperation.m; sourceTree = "<group>"; };
+		9E96377E182E3023003B275B /* AFURLConnectionOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLConnectionOperation.h; sourceTree = "<group>"; };
+		9E96377F182E3023003B275B /* AFURLConnectionOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLConnectionOperation.m; sourceTree = "<group>"; };
+		9E963780182E3023003B275B /* AFXMLRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFXMLRequestOperation.h; sourceTree = "<group>"; };
+		9E963781182E3023003B275B /* AFXMLRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFXMLRequestOperation.m; sourceTree = "<group>"; };
+		9E963782182E3023003B275B /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
+		9E963783182E3023003B275B /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
+		9E96378E182E307C003B275B /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
+		9E96378F182E307C003B275B /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,7 +182,15 @@
 				9E96372A182E0238003B275B /* Main.storyboard */,
 				9E96372D182E0238003B275B /* MSViewController.h */,
 				9E96372E182E0238003B275B /* MSViewController.m */,
+				9E96376A182E1136003B275B /* MSRegisterViewController.h */,
+				9E96376B182E1136003B275B /* MSRegisterViewController.m */,
+				9E96376D182E2F99003B275B /* MSFetcher.h */,
+				9E96376E182E2F99003B275B /* MSFetcher.m */,
 				9E963730182E0238003B275B /* Images.xcassets */,
+				9E96378D182E307C003B275B /* JSONKit */,
+				9E963770182E3023003B275B /* AFNetworking */,
+				9E96374D182E0E40003B275B /* Logo@2x.png */,
+				9E96374F182E10F4003B275B /* Roboto */,
 				9E96371F182E0238003B275B /* Supporting Files */,
 			);
 			path = Screenr;
@@ -150,6 +223,61 @@
 				9E963740182E0238003B275B /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9E96374F182E10F4003B275B /* Roboto */ = {
+			isa = PBXGroup;
+			children = (
+				9E963750182E10F4003B275B /* LICENSE.txt */,
+				9E963751182E10F4003B275B /* Roboto-Black.ttf */,
+				9E963752182E10F4003B275B /* Roboto-BlackItalic.ttf */,
+				9E963753182E10F4003B275B /* Roboto-Bold.ttf */,
+				9E963754182E10F4003B275B /* Roboto-BoldItalic.ttf */,
+				9E963755182E10F4003B275B /* Roboto-Italic.ttf */,
+				9E963756182E10F4003B275B /* Roboto-Light.ttf */,
+				9E963757182E10F4003B275B /* Roboto-LightItalic.ttf */,
+				9E963758182E10F4003B275B /* Roboto-Medium.ttf */,
+				9E963759182E10F4003B275B /* Roboto-MediumItalic.ttf */,
+				9E96375A182E10F4003B275B /* Roboto-Regular.ttf */,
+				9E96375B182E10F4003B275B /* Roboto-Thin.ttf */,
+				9E96375C182E10F4003B275B /* Roboto-ThinItalic.ttf */,
+			);
+			path = Roboto;
+			sourceTree = "<group>";
+		};
+		9E963770182E3023003B275B /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				9E963771182E3023003B275B /* AFHTTPClient.h */,
+				9E963772182E3023003B275B /* AFHTTPClient.m */,
+				9E963773182E3023003B275B /* AFHTTPRequestOperation.h */,
+				9E963774182E3023003B275B /* AFHTTPRequestOperation.m */,
+				9E963775182E3023003B275B /* AFImageRequestOperation.h */,
+				9E963776182E3023003B275B /* AFImageRequestOperation.m */,
+				9E963777182E3023003B275B /* AFJSONRequestOperation.h */,
+				9E963778182E3023003B275B /* AFJSONRequestOperation.m */,
+				9E963779182E3023003B275B /* AFNetworkActivityIndicatorManager.h */,
+				9E96377A182E3023003B275B /* AFNetworkActivityIndicatorManager.m */,
+				9E96377B182E3023003B275B /* AFNetworking.h */,
+				9E96377C182E3023003B275B /* AFPropertyListRequestOperation.h */,
+				9E96377D182E3023003B275B /* AFPropertyListRequestOperation.m */,
+				9E96377E182E3023003B275B /* AFURLConnectionOperation.h */,
+				9E96377F182E3023003B275B /* AFURLConnectionOperation.m */,
+				9E963780182E3023003B275B /* AFXMLRequestOperation.h */,
+				9E963781182E3023003B275B /* AFXMLRequestOperation.m */,
+				9E963782182E3023003B275B /* UIImageView+AFNetworking.h */,
+				9E963783182E3023003B275B /* UIImageView+AFNetworking.m */,
+			);
+			path = AFNetworking;
+			sourceTree = "<group>";
+		};
+		9E96378D182E307C003B275B /* JSONKit */ = {
+			isa = PBXGroup;
+			children = (
+				9E96378E182E307C003B275B /* JSONKit.h */,
+				9E96378F182E307C003B275B /* JSONKit.m */,
+			);
+			path = JSONKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,9 +357,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E963768182E10F4003B275B /* Roboto-Thin.ttf in Resources */,
+				9E963765182E10F4003B275B /* Roboto-Medium.ttf in Resources */,
+				9E963761182E10F4003B275B /* Roboto-BoldItalic.ttf in Resources */,
 				9E963731182E0238003B275B /* Images.xcassets in Resources */,
+				9E963764182E10F4003B275B /* Roboto-LightItalic.ttf in Resources */,
+				9E963766182E10F4003B275B /* Roboto-MediumItalic.ttf in Resources */,
+				9E96374E182E0E40003B275B /* Logo@2x.png in Resources */,
+				9E963763182E10F4003B275B /* Roboto-Light.ttf in Resources */,
 				9E963723182E0238003B275B /* InfoPlist.strings in Resources */,
+				9E96375F182E10F4003B275B /* Roboto-BlackItalic.ttf in Resources */,
+				9E963769182E10F4003B275B /* Roboto-ThinItalic.ttf in Resources */,
+				9E96375D182E10F4003B275B /* LICENSE.txt in Resources */,
 				9E96372C182E0238003B275B /* Main.storyboard in Resources */,
+				9E963762182E10F4003B275B /* Roboto-Italic.ttf in Resources */,
+				9E963767182E10F4003B275B /* Roboto-Regular.ttf in Resources */,
+				9E963760182E10F4003B275B /* Roboto-Bold.ttf in Resources */,
+				9E96375E182E10F4003B275B /* Roboto-Black.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,9 +392,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E963786182E3023003B275B /* AFImageRequestOperation.m in Sources */,
 				9E963729182E0238003B275B /* MSAppDelegate.m in Sources */,
+				9E96376F182E2F99003B275B /* MSFetcher.m in Sources */,
+				9E96378B182E3023003B275B /* AFXMLRequestOperation.m in Sources */,
+				9E96376C182E1136003B275B /* MSRegisterViewController.m in Sources */,
+				9E96378C182E3023003B275B /* UIImageView+AFNetworking.m in Sources */,
+				9E96378A182E3023003B275B /* AFURLConnectionOperation.m in Sources */,
+				9E963788182E3023003B275B /* AFNetworkActivityIndicatorManager.m in Sources */,
 				9E96372F182E0238003B275B /* MSViewController.m in Sources */,
+				9E963787182E3023003B275B /* AFJSONRequestOperation.m in Sources */,
 				9E963725182E0238003B275B /* main.m in Sources */,
+				9E963789182E3023003B275B /* AFPropertyListRequestOperation.m in Sources */,
+				9E963784182E3023003B275B /* AFHTTPClient.m in Sources */,
+				9E963785182E3023003B275B /* AFHTTPRequestOperation.m in Sources */,
+				9E963790182E307C003B275B /* JSONKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
