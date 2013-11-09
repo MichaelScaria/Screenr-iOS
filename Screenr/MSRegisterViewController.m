@@ -114,7 +114,7 @@
     alreadyHaveVerifiyCode.frame =CGRectMake(368, 230, 230, 60);
     alreadyHaveVerifiyCode.titleLabel.textAlignment = NSTextAlignmentCenter;
     [alreadyHaveVerifiyCode setTitleColor:grayColor forState:UIControlStateNormal];
-    [alreadyHaveVerifiyCode setTitle:@"I already have my verification code." forState:UIControlStateNormal];
+    [alreadyHaveVerifiyCode setTitle:@"I have my verification code." forState:UIControlStateNormal];
     alreadyHaveVerifiyCode.backgroundColor = [UIColor clearColor];
     alreadyHaveVerifiyCode.titleLabel.font = [UIFont fontWithName:@"Roboto-Light" size:14];
     [alreadyHaveVerifiyCode addTarget:self action:@selector(hasCode:) forControlEvents:UIControlEventTouchUpInside];
@@ -127,19 +127,46 @@
     verifyField.delegate = self;
     verifyField.textColor = [UIColor blackColor];
     verifyField.alpha = 0;
+    verifyField.returnKeyType = UIReturnKeyGo;
     [_scrollView addSubview:verifyField];
     
-    verifyLabel = [[UILabel alloc] initWithFrame:CGRectMake(320, 200, 320, 30)];
-    verifyLabel.text = @"Enter verification code.";
+    verifyLabel = [[UILabel alloc] initWithFrame:CGRectMake(320, 210, 320, 30)];
+    verifyLabel.text = @"Enter your verification number.";
     verifyLabel.textAlignment = NSTextAlignmentCenter;
     verifyLabel.font = [UIFont fontWithName:@"Roboto-Light" size:15];
     verifyLabel.textColor = grayColor;
     verifyLabel.alpha = 0;
     [_scrollView addSubview:verifyLabel];
     
+    backButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    backButton.frame = CGRectMake(320, 240, 320, 30);
+    backButton.titleLabel.textAlignment = NSTextAlignmentCenter;
+    [backButton setTitleColor:grayColor forState:UIControlStateNormal];
+    [backButton setTitle:@"go back" forState:UIControlStateNormal];
+    backButton.backgroundColor = [UIColor clearColor];
+    backButton.titleLabel.font = [UIFont fontWithName:@"Roboto-Light" size:14];
+    [backButton addTarget:self action:@selector(goBack:) forControlEvents:UIControlEventTouchUpInside];
+    backButton.alpha = 0;
+    [_scrollView addSubview:backButton];
+    
     textField.text = @"(972) 310-4741";
     verifyButton.enabled = YES;
     [_scrollView setContentOffset:CGPointMake(320, 0)];
+}
+
+- (void)goBack:(UIButton *)button {
+    [UIView animateWithDuration:.5 animations:^{
+        verifyButton.alpha = 1;
+        alreadyHaveVerifiyCode.alpha = 1;
+        verifyField.alpha = 0;
+        verifyField.center = CGPointMake(verifyField.center.x, verifyField.center.y + 100);
+        backButton.alpha = 0;
+        verifyLabel.alpha = 0;
+    }completion:^(BOOL isCompleted){
+        [UIView animateWithDuration:.4 animations:^{
+            if ([verifyField isFirstResponder]) [verifyField resignFirstResponder];
+        }completion:nil];
+    }];
 }
 
 - (void)hasCode:(UIButton *)button {
@@ -148,6 +175,7 @@
         alreadyHaveVerifiyCode.alpha = 0;
         verifyField.alpha = 1;
         verifyField.center = CGPointMake(verifyField.center.x, verifyField.center.y - 100);
+        backButton.alpha = 1;
     }completion:^(BOOL isCompleted){
         [UIView animateWithDuration:.4 animations:^{
             verifyLabel.alpha = 1;
@@ -175,10 +203,15 @@
         }];
     }
     else {
+        verifyButton.enabled = NO;
         [[MSFetcher sharedInstance] verifyPhoneNumber:finalString success:^{
             ;
         }failure:nil];
     }
+}
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
@@ -188,6 +221,33 @@
     else if ([textField isFirstResponder]){
         [textField resignFirstResponder];
     }
+}
+
+- (void)enteredVerification {
+    UIView *overlay = [[UIView alloc] initWithFrame:self.view.bounds];
+    overlay.backgroundColor = [UIColor colorWithWhite:.3 alpha:.5];
+    UIActivityIndicatorView *aiv = [[UIActivityIndicatorView alloc] initWithFrame:CGRectMake(0, 0, 30, 30)];
+    aiv.center = self.view.center;
+    [overlay addSubview:aiv];
+    [aiv startAnimating];
+    overlay.alpha = 0;
+    [UIView animateWithDuration:.5 animations:^{
+        overlay.alpha = 1;
+    }completion:nil];
+    [[MSFetcher sharedInstance] confirmVerification:verifyField.text success:^{
+        NSString *finalString = [[[[textField.text stringByReplacingOccurrencesOfString:@"(" withString:@""]  stringByReplacingOccurrencesOfString:@")" withString:@""] stringByReplacingOccurrencesOfString:@"-" withString:@""] stringByReplacingOccurrencesOfString:@" " withString:@""];
+        [[NSUserDefaults standardUserDefaults] setObject:finalString forKey:@"PhoneNumber"];
+        [aiv stopAnimating];
+        [UIView animateWithDuration:.5 animations:^{
+            overlay.alpha = 0;
+        }completion:^(BOOL completion) {
+            [overlay removeFromSuperview];
+            [self dismissViewControllerAnimated:YES completion:nil];
+        }];
+    } failure:^{
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Invalid Verification" message:@"Please try again" delegate:self cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+        [alert show];
+    }];
 }
 
 - (BOOL)textField:(UITextField *)aTextField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
@@ -222,6 +282,9 @@
         return YES;
     }
     else {
+        if ([string isEqualToString:@"\n"] && verifyField.text.length == 5) {
+            [self enteredVerification];
+        }
         if ([verifyField.text stringByReplacingCharactersInRange:range withString:string].length > 5) {
             return NO;
         }

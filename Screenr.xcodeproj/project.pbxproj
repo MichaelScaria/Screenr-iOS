@@ -47,6 +47,8 @@
 		9E96378B182E3023003B275B /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E963781182E3023003B275B /* AFXMLRequestOperation.m */; };
 		9E96378C182E3023003B275B /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E963783182E3023003B275B /* UIImageView+AFNetworking.m */; };
 		9E963790182E307C003B275B /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E96378F182E307C003B275B /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		9E963792182E52DF003B275B /* Disclosure.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E963791182E52DF003B275B /* Disclosure.png */; };
+		9E963795182E53C0003B275B /* MSPurchaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E963794182E53C0003B275B /* MSPurchaseViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,6 +120,9 @@
 		9E963783182E3023003B275B /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
 		9E96378E182E307C003B275B /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
 		9E96378F182E307C003B275B /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
+		9E963791182E52DF003B275B /* Disclosure.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Disclosure.png; sourceTree = "<group>"; };
+		9E963793182E53C0003B275B /* MSPurchaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MSPurchaseViewController.h; path = Roboto/MSPurchaseViewController.h; sourceTree = "<group>"; };
+		9E963794182E53C0003B275B /* MSPurchaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MSPurchaseViewController.m; path = Roboto/MSPurchaseViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,12 +189,15 @@
 				9E96372E182E0238003B275B /* MSViewController.m */,
 				9E96376A182E1136003B275B /* MSRegisterViewController.h */,
 				9E96376B182E1136003B275B /* MSRegisterViewController.m */,
+				9E963793182E53C0003B275B /* MSPurchaseViewController.h */,
+				9E963794182E53C0003B275B /* MSPurchaseViewController.m */,
 				9E96376D182E2F99003B275B /* MSFetcher.h */,
 				9E96376E182E2F99003B275B /* MSFetcher.m */,
 				9E963730182E0238003B275B /* Images.xcassets */,
 				9E96378D182E307C003B275B /* JSONKit */,
 				9E963770182E3023003B275B /* AFNetworking */,
 				9E96374D182E0E40003B275B /* Logo@2x.png */,
+				9E963791182E52DF003B275B /* Disclosure.png */,
 				9E96374F182E10F4003B275B /* Roboto */,
 				9E96371F182E0238003B275B /* Supporting Files */,
 			);
@@ -373,6 +381,7 @@
 				9E963762182E10F4003B275B /* Roboto-Italic.ttf in Resources */,
 				9E963767182E10F4003B275B /* Roboto-Regular.ttf in Resources */,
 				9E963760182E10F4003B275B /* Roboto-Bold.ttf in Resources */,
+				9E963792182E52DF003B275B /* Disclosure.png in Resources */,
 				9E96375E182E10F4003B275B /* Roboto-Black.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -407,6 +416,7 @@
 				9E963784182E3023003B275B /* AFHTTPClient.m in Sources */,
 				9E963785182E3023003B275B /* AFHTTPRequestOperation.m in Sources */,
 				9E963790182E307C003B275B /* JSONKit.m in Sources */,
+				9E963795182E53C0003B275B /* MSPurchaseViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

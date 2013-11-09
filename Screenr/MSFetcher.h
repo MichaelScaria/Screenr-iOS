@@ -11,4 +11,5 @@
 @interface MSFetcher : NSObject
 + (MSFetcher *)sharedInstance;
 - (void)verifyPhoneNumber:(NSString *)number success:(void (^)(void))success failure:(void (^)(void))failure;
+- (void)confirmVerification:(NSString *)verification success:(void (^)(void))success failure:(void (^)(void))failure;
 @end

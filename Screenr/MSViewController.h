@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface MSViewController : UIViewController
+@property (strong, nonatomic) IBOutlet UIButton *titleButton;
+@property (strong, nonatomic) IBOutlet UIView *headerView;
+@property (strong, nonatomic) IBOutlet UILabel *numbersLabel;
 - (void)presentRegisterView;
 @end

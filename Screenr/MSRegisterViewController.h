@@ -17,6 +17,7 @@
     UIButton *alreadyHaveVerifiyCode;
     UITextField *verifyField;
     UILabel *verifyLabel;
+    UIButton *backButton;
 }
 
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollView;

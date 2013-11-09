@@ -10,7 +10,7 @@
 
 #import "AFNetworking.h"
 #import "JSONKit.h"
-//#define kRootURL @"http://Michaels-MacBook-Pro.local:3000/api"
+//#define kRootURL @"http://screenr.herokuapp.com"
 #define kRootURL @"http://0.0.0.0:3000"
 
 @implementation MSFetcher
@@ -54,5 +54,26 @@
             }
         }];
     }
+}
+
+- (void)confirmVerification:(NSString *)verification success:(void (^)(void))success failure:(void (^)(void))failure {
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@/api/verify", kRootURL]]];
+    [request setValue:@"gzip" forHTTPHeaderField:@"Accept-Encoding"];
+    [request setHTTPBody:[[NSString stringWithFormat:@"validation_code=%@", verification] dataUsingEncoding:NSUTF8StringEncoding]];
+    [request setHTTPMethod:@"POST"];
+
+    AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
+    [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSData *data = (NSData *)responseObject;
+        NSDictionary *result = [[JSONDecoder decoder] objectWithData:data];
+        if ([[result objectForKey:@"final"] isEqualToString:@"success"]){
+            if (success) success();
+        }
+        else if (failure) failure();
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Error: %@", error);
+        if (failure) failure();
+    }];
+    [operation start];
 }
 @end
