@@ -19,5 +19,6 @@
 
 - (void)getInboxForPhoneNumber:(NSString *)number success:(void (^)(NSArray *))success failure:(void (^)(void))failure;
 - (void)messagesForConversation:(NSString *)conversationID success:(void (^)(NSArray *))success failure:(void (^)(void))failure;
-- (void)sendMessageInConversation:(NSString *)conversationID withNumber:(NSString *)number  success:(void (^)(NSArray *))success failure:(void (^)(void))failure;
+- (void)sendMessage:(NSString *)message InConversation:(NSString *)conversationID withNumber:(NSString *)number toNumber:(NSString *)aNumber success:(void (^)(NSArray *))success failure:(void (^)(void))failure;
+- (void)startConversationFrom:(NSString *)number withMessage:(NSString *)message toNumber:(NSString *)nextNumber success:(void (^)(NSArray *))success failure:(void (^)(void))failure;
 @end

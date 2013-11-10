@@ -94,6 +94,10 @@
 }
 
 - (IBAction)send:(id)sender {
+    [[MSFetcher sharedInstance] sendMessage:_textField.text InConversation:_conversationID withNumber:_myNumber toNumber:_opNumber success:^(NSArray *completion) {
+        ;
+    } failure:nil];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {

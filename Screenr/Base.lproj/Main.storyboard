@@ -172,6 +172,17 @@
                                             <action selector="cancel:" destination="4KM-s3-BOW" eventType="touchUpInside" id="eqL-H9-FFk"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="hOV-dv-mZ7">
+                                        <rect key="frame" x="263" y="20" width="46" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="send">
+                                            <color key="titleColor" red="0.0" green="0.76862745099999996" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="send:" destination="4KM-s3-BOW" eventType="touchUpInside" id="Yfv-oE-xPk"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
@@ -181,14 +192,16 @@
                     <connections>
                         <outlet property="cancelButton" destination="iP5-ue-ROl" id="Z0d-9A-YG6"/>
                         <outlet property="headerView" destination="jms-T8-PuW" id="8GL-PS-TTr"/>
+                        <outlet property="sendButton" destination="hOV-dv-mZ7" id="jzn-sg-Y69"/>
                         <outlet property="tableView" destination="5GQ-TP-h0K" id="57N-Cf-qad"/>
                         <outlet property="titleLabel" destination="mtp-eP-Rl3" id="jVt-bz-BcV"/>
                         <segue destination="5Nq-Yv-lu2" kind="modal" identifier="Message" id="XJD-Ll-ppM"/>
+                        <segue destination="yls-BO-WZg" kind="modal" identifier="Send" id="ZRS-0v-j1p"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1UE-Jq-F0T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="700" y="115"/>
+            <point key="canvasLocation" x="696" y="115"/>
         </scene>
         <!--Message View Controller-->
         <scene sceneID="kUo-iP-bno">
@@ -448,6 +461,91 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c1J-xn-Jkg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="193" y="-594"/>
+        </scene>
+        <!--Start Conversation View Controller-->
+        <scene sceneID="GCe-qS-0Qc">
+            <objects>
+                <viewController id="yls-BO-WZg" customClass="MSStartConversationViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hm3-FT-3hS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="nL2-5D-aQp">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="63"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="9Du-Uk-FkU">
+                                        <rect key="frame" x="104" y="20" width="112" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Send">
+                                            <color key="titleColor" red="0.0" green="0.76862745099999996" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="send:" destination="yls-BO-WZg" eventType="touchUpInside" id="8be-eE-vK6"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="acz-Oh-Adu">
+                                        <rect key="frame" x="20" y="20" width="46" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="cancel">
+                                            <color key="titleColor" red="0.0" green="0.76862745099999996" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="cancel:" destination="yls-BO-WZg" eventType="touchUpInside" id="l1V-Qk-XTj"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="GVh-rX-CNU" userLabel="+1">
+                                <rect key="frame" x="80" y="97" width="38" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="(999) 999-999" minimumFontSize="17" id="155-qh-JfA">
+                                <rect key="frame" x="114" y="97" width="150" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <connections>
+                                    <outlet property="delegate" destination="yls-BO-WZg" id="rhy-V6-XRX"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter the number of the recipient." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dSd-xD-Djo">
+                                <rect key="frame" x="40" y="71" width="242" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="What do you want to say?" id="9ZI-CU-jya">
+                                <rect key="frame" x="40" y="135" width="240" height="108"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <connections>
+                                    <outlet property="delegate" destination="yls-BO-WZg" id="r8c-HR-v66"/>
+                                </connections>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <connections>
+                        <outlet property="cancelButton" destination="acz-Oh-Adu" id="Mms-LP-dGg"/>
+                        <outlet property="headerView" destination="nL2-5D-aQp" id="uwW-Xf-MDo"/>
+                        <outlet property="plusOneLabel" destination="GVh-rX-CNU" id="ZVP-hr-BJQ"/>
+                        <outlet property="rulesLabel" destination="dSd-xD-Djo" id="NlH-Rz-hnb"/>
+                        <outlet property="sendButton" destination="9Du-Uk-FkU" id="Trd-QP-25U"/>
+                        <outlet property="textField" destination="155-qh-JfA" id="hmz-ak-sJp"/>
+                        <outlet property="textView" destination="9ZI-CU-jya" id="T8X-b2-84D"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tbx-dz-b8j" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="696" y="-581"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="UkF-rK-zji">

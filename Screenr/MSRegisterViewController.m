@@ -149,9 +149,9 @@
     backButton.alpha = 0;
     [_scrollView addSubview:backButton];
     
-    textField.text = @"(972) 310-4741";
-    verifyButton.enabled = YES;
-    [_scrollView setContentOffset:CGPointMake(320, 0)];
+//    textField.text = @"(972) 310-4741";
+//    verifyButton.enabled = YES;
+//    [_scrollView setContentOffset:CGPointMake(320, 0)];
 }
 
 - (void)goBack:(UIButton *)button {

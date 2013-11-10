@@ -32,7 +32,7 @@
     _headerView.layer.shadowRadius = 4;
     _headerView.layer.shadowOpacity = 0.4;
     _titleLabel.font = [UIFont fontWithName:@"Roboto" size:25];
-    _cancelButton.titleLabel.font = [UIFont fontWithName:@"Roboto" size:16];
+    _cancelButton.titleLabel.font = _sendButton.titleLabel.font = [UIFont fontWithName:@"Roboto" size:16];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
@@ -42,6 +42,7 @@
         NSDictionary *d = _conversations[path.row];
         vc.myNumber = _number;
         vc.conversationID = d[@"id"];
+        vc.opNumber = opNumber;
     }
 }
 
@@ -68,6 +69,7 @@
     if ([d[@"first_number"] isEqualToString:_number]) {
         //assign second
         NSString *numberString = [d[@"second_number"] substringFromIndex:2];
+        opNumber = numberString;
         numberLabel.text = [NSString stringWithFormat:@"(%@) %@",[numberString  substringToIndex:3],[numberString substringFromIndex:3]];
         regionLabel.text = d[@"second_region"] != [NSNull null] ? d[@"second_region"] : @"TX";
         zipcodeLabel.text = d[@"second_postal_code"] != [NSNull null] ? d[@"first_postal_code"] : @"75102";
@@ -75,6 +77,7 @@
     else {
         //assgin first
         NSString *numberString = [d[@"first_number"] substringFromIndex:2];
+        opNumber = numberString;
         numberLabel.text = [NSString stringWithFormat:@"(%@) %@",[numberString  substringToIndex:3],[numberString substringFromIndex:3]];
         regionLabel.text = [d objectForKey:@"first_region"] != [NSNull null] ? d[@"first_region"] : @"TX";
         zipcodeLabel.text = [d objectForKey:@"first_postal_code"] != [NSNull null] ? d[@"first_postal_code"] : @"75102";
@@ -90,5 +93,9 @@
 
 - (IBAction)cancel:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (IBAction)send:(id)sender {
+    [self performSegueWithIdentifier:@"Send" sender:self];
 }
 @end

@@ -10,8 +10,8 @@
 
 #import "AFNetworking.h"
 #import "JSONKit.h"
-//#define kRootURL @"http://screenr.herokuapp.com"
-#define kRootURL @"http://0.0.0.0:3000"
+#define kRootURL @"http://screenr.herokuapp.com"
+//#define kRootURL @"http://0.0.0.0:3000"
 
 @implementation MSFetcher
 + (MSFetcher *)sharedInstance
@@ -202,5 +202,41 @@
     }];
     [operation start];
     
+}
+
+- (void)sendMessage:(NSString *)message InConversation:(NSString *)conversationID withNumber:(NSString *)number toNumber:(NSString *)aNumber success:(void (^)(NSArray *))success failure:(void (^)(void))failure {
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@/api/send", kRootURL]]];
+    [request setValue:@"gzip" forHTTPHeaderField:@"Accept-Encoding"];
+    [request setHTTPBody:[[NSString stringWithFormat:@"conversation_id=%@&number=%@&a_number=%@&message=%@",conversationID, number, aNumber, message] dataUsingEncoding:NSUTF8StringEncoding]];
+    [request setHTTPMethod:@"POST"];
+    
+    AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
+    [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSData *data = (NSData *)responseObject;
+        NSArray *results = [[JSONDecoder decoder] objectWithData:data];
+        success(results);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Error: %@", error);
+        if (failure) failure();
+    }];
+    [operation start];
+}
+
+- (void)startConversationFrom:(NSString *)number withMessage:(NSString *)message toNumber:(NSString *)nextNumber success:(void (^)(NSArray *))success failure:(void (^)(void))failure {
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@/api/start", kRootURL]]];
+    [request setValue:@"gzip" forHTTPHeaderField:@"Accept-Encoding"];
+    [request setHTTPBody:[[NSString stringWithFormat:@"number=%@&message=%@&next_number=%@",number, message, nextNumber] dataUsingEncoding:NSUTF8StringEncoding]];
+    [request setHTTPMethod:@"POST"];
+    
+    AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
+    [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSData *data = (NSData *)responseObject;
+        NSArray *results = [[JSONDecoder decoder] objectWithData:data];
+        success(results);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Error: %@", error);
+        if (failure) failure();
+    }];
+    [operation start];
 }
 @end

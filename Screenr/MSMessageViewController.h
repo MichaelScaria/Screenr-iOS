@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MSMessageViewController : UIViewController <UITextFieldDelegate>
+@interface MSMessageViewController : UIViewController <UITextFieldDelegate> {
+    
+}
 @property (nonatomic, strong) NSString *conversationID;
+@property (nonatomic, strong) NSString *opNumber;
 @property (nonatomic, strong) NSString *myNumber;
 @property (nonatomic, strong) NSArray *messages;
 @property (strong, nonatomic) IBOutlet UILabel *titleLabel;
